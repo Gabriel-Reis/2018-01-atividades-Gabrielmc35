@@ -18,12 +18,15 @@
         document.getElementById("grupoV1").classList.remove("has-error");
         document.getElementById("alertaV1").style.display = "none";
         if ( document.dados.valor2.value.length == 0 || isNaN(n2) ) {
-          window.alert("Preencha a altura corretamente!");
+          document.getElementById("alertaV2").style.display = "block";
+          document.getElementById("grupoV2").classList.add("has-error");
           document.dados.valor2.value = "";
           document.dados.valor2.focus();
-
           return;
         }
+              document.getElementById("grupoV2").classList.remove("has-error");
+        document.getElementById("alertaV2").style.display = "none";
+
 
 
         var nn2= n2 * n2;
