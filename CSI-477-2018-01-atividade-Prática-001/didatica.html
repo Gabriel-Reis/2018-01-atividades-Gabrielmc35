@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+            <link href="css/didatica.css" rel="stylesheet">
+
+
+  <meta charset="utf-8">
+<script type="text/javascript" src="F:\wamp\www/jquery-3.3.1.js"></script>
+
+</head>
+<body>
+
+<h1 class="titulo" "  > Selecione o elemento diferente em cada grupo</h1>
+
+<h1 align="center">Grupo 1 </h1>
+<div class="grid-container">
+
+  <div class='arroz'>
+  <input type='checkbox' id='arroz' value="1">
+  <label for='arroz'></label>
+
+
+
+  <img src="Imagens/arroz.jpg  " height="173" width="275 " >
+</div>
+
+<div class='batata'>
+  <input type='checkbox' id='batata'>
+  
+  <label for='batata'></label>
+
+  <img src= "Imagens/batata.jpg" " height="173" width="275 " >
+</div> 
+  <div class='feijao'>
+  <input type='checkbox' id='feijao'>
+  <label for='feijao'></label>
+
+  <img src="Imagens/feijao.jpg  " height="173" width="275 " >
+</div>
+  <div class='sabonete'>
+  <input type='checkbox' id='sabonete'>
+  <label for='sabonete'></label>
+
+  <img src="Imagens/sabonete.jpg  " height="173" width="275 " >
+</div>
+
+</div>
+
+<h1 align="center">Grupo 2 </h1>
+<div class="grid-container">
+
+  <div class='bicicleta'>
+  <input type='checkbox' id='bicicleta'>
+  <label for='bicicleta'></label>
+
+  <img src="Imagens/bicicleta.jpg  " height="173" width="275 " >
+</div>
+
+<div class='carro'>
+  <input type='checkbox' id='carro'>
+  <label for='carro'></label>
+
+  <img src= "Imagens/carro.jpg" " height="173" width="275 " >
+</div> 
+  <div class='moto'>
+  <input type='checkbox' id='moto'>
+  <label for='moto'></label>
+
+  <img src="Imagens/moto.jpg  " height="173" width="275 " >
+</div>
+  <div class='algodaodoce'>
+  <input type='checkbox' id='algodaodoce'>
+  <label for='sabalgodaodoceonete'></label>
+
+  <img src="Imagens/algodaodoce.jpg  " height="173" width="275 " >
+</div>
+
+</div>
+
+<h1 align="center">Grupo 3   </h1>
+<div class="grid-container">
+
+  <div class='cadeirapraia'>
+  <input type='checkbox' id='cadeirapraia'>
+  <label for='cadeirapraia'></label>
+
+  <img src="Imagens/cadeirapraia.jpg  " height="173" width="275 " >
+</div>
+
+<div class='oculos'>
+  <input type='checkbox' id='oculos'>
+  <label for='oculos'></label>
+
+  <img src= " Imagens/oculos.jpg" " height="173" width="275 " >
+</div> 
+  <div class='maquinalavar'>
+  <input type='checkbox' id='maquinalavar'>
+  <label for='maquinalavar'></label>
+
+  <img src="Imagens/maquinalavar.jpg  " height="173" width="275 " >
+</div>
+  <div class='sombrinha'>
+  <input type='checkbox' id='sombrinha'>
+  <label for='sombrinha'></label>
+
+  <img src="Imagens/sombrinha.jpg  " height="173" width="275 " >
+</div>
+
+</div>
+
+<h1 align="center">Grupo 4   </h1>
+<div class="grid-container">
+
+  <div class='fenda'>
+  <input type='checkbox' id='fenda'>
+  <label for='fenda'></label>
+
+  <img src="Imagens/fenda.jpg  " height="173" width="275 " >
+</div>
+
+<div class='bola'>
+  <input type='checkbox' id='bola'>
+  <label for='bola'></label>
+
+  <img src= "Imagens/bola.jpg" " height="173" width="275 " >
+</div> 
+  <div class='skate'>
+  <input type='checkbox' id='skate'>
+  <label for='skate'></label>
+
+  <img src="Imagens/skate.jpg  " height="173" width="275 " >
+</div>
+  <div class='patins'>
+  <input type='checkbox' id='patins'>
+  <label for='patins'></label>
+
+  <img src="Imagens/patins.jpg  " height="173" width="275 " >
+</div>
+
+</div>
+
+<div class="botao">
+<input type="button" id="checar" value="Confirmar" class="btn btn-primary"  />
+
+</div>
+
+
+
+
+<div class="Confirmagrupo1">
+<script >
+  $('#checar').click(function() {
+  //  alert($('#maquinalavar').is(':checked'));
+    if($('#arroz').is(':checked')==false&&$('#batata').is(':checked')==false&&$('#feijao').is(':checked')==false&& $('#sabonete').is(':checked')==true)
+    {
+      alert("Grupo 1 certo");
+    }
+    else
+    {
+         alert("Erro no grupo 1");
+    }
+});
+</script>
+</div>
+
+<div class="Confirmagrupo2">
+<script >
+  $('#checar').click(function() {
+  //  alert($('#maquinalavar').is(':checked'));
+    if($('#bicicleta').is(':checked')==false&&$('#carro').is(':checked')==false&&$('#moto').is(':checked')==false&& $('#algodaodoce').is(':checked')==true)
+    {
+      alert("Grupo 2 certo");
+    }
+      else
+    {
+         alert("Erro no grupo 2");
+    }
+});
+</script>
+</div>
+
+<div class="Confirmagrupo3">
+<script >
+  $('#checar').click(function() {
+  //  alert($('#maquinalavar').is(':checked'));
+    if($('#cadeirapraia').is(':checked')==false&&$('#oculos').is(':checked')==false&&$('#sombrinha').is(':checked')==false&& $('#maquinalavar').is(':checked')==true)
+    {
+      alert("Grupo 3 certo");
+    }
+      else
+    {
+         alert("Erro no grupo 3");
+    }
+});
+</script>
+</div>
+
+<div class="Confirmagrupo4">
+<script >
+  $('#checar').click(function() {
+  //  alert($('#maquinalavar').is(':checked'));
+    if($('#bola').is(':checked')==false&&$('#skate').is(':checked')==false&&$('#patins').is(':checked')==false&& $('#fenda').is(':checked')==true)
+    {
+      alert("Grupo 4 certo");
+
+    }
+      else
+    {
+         alert("Erro no grupo 4");
+    }
+});
+</script>
+</div>
+
+</script>
+</div>
+
+</body>
+</html>

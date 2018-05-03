@@ -1,0 +1,23 @@
+Oculos de sol =https://www.mxparts.com.br/oculos-de-sol-pro-circuit
+algodao doce= http://www.redetv.uol.com.br/jornalismo/da-para-acreditar/empresa-americana-faz-sucesso-com-algodao-doce-de-maconha
+Arroz= https://www.youtube.com/watch?v=GYPGxyK4Z8w
+Batata= http://ogorod.org/gallery/ovoshhi/kartofel
+Bicicleta= https://www.bicyclebluebook.com/searchlistingdetail.aspx?id=3056398
+Bola= http://jktbet.online/judi-bola-online-dengan-panduan-agen-judi-terbaik/
+Cadeira de praia= https://www.facebook.com/supergas.superagua/
+Carro=http://jornaldocarro.estadao.com.br/carros/hyundai-creta-sofre-aumento-de-precos-em-2018/
+Feijao=http://www.imagens.usp.br/?p=26747
+Chave de fenda= https://www.ufrgs.br/napead/repositorio/objetos/quem-sou-eu/
+Maquina lavar= https://www.magazineluiza.com.br/maquina-de-lavar-consul-115kg-com-reutilizacao-de-agua-e-funcao-mais-secas/p/8349846/ed/lava/
+Moto=https://wallpapercave.com/yamaha-r6-wallpapers
+Patins=https://www.pinterest.com/justmyfour/our-new-hobbyskating/
+Sabonete= https://www.secolcasa.com.br/sabonete-natural-giorno-bagno-magnolia-e-lichia-barra-180g/p
+Skate=https://www.pinterest.com/adogsbody/level-7-omega-protocol/
+Sombrinha=https://www.magazineluiza.com.br/kit-15-sombrinha-guarda-chuvas-frevo-alua-festas/p/7360294/am/acfe/
+
+
+
+
+Base para algumas funções de checar checkbox retiradas de :http://jsfiddle.net/Ek33a/
+
+Grid para a questão das crianças retirado de =https://www.w3schools.com/css/css_grid.asp
