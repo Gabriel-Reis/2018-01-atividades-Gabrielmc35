@@ -1,0 +1,15 @@
+.textolabel {
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    font-size: .85em;
+    
+}
+
+.titulo {
+    display: grid;
+    text-align: center;
+    line-height: 150%;
+    font-size: all;
+    color: purple;
+    }
