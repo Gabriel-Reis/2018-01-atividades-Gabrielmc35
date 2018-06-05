@@ -13,7 +13,7 @@ body {
 
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #142;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 .dropdown {
-    float: right: ;
+    float: left: ;
     overflow: hidden;
 }
 
@@ -110,22 +110,21 @@ body {
       </div>   
       <div class="row">
         <div class="column">
-          <h3>Cliente</h3>
-          <a href="./view/login.php">Login</a>
-         <a href="./view/Registrar.php">Cadastro</a>
-        <a href="./view/login.php">Mostrar Exames</a>
+          <h3>Cliente/Administrador</h3>
+           <a href="../trabalhopratico2/Router.php?op=11.php">Login</a>
+         <a href="../trabalhopratico2/Router.php?op=12.php">Cadastro</a>
+
 
         </div>
         <div class="column">
       
-<h3>Administrador</h3>
-          <a href="./view/login.php">Login</a>
-         <a href="./view/Registrar.php">Cadastro</a>
-        <a href="./view/verProcedimentos.php">Procedimentos</a>
 
-        </div>
-        <div class="column">
+     
        
+       <h3>Procedimentos</h3>
+        <a href="../trabalhopratico2/Router.php?op=6.php">Mostrar Procedimentos</a>
+   </div>
+        <div class="column">
         </div>
       </div>
     </div>

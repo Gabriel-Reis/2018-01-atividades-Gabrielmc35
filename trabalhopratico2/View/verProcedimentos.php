@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,33 +10,31 @@
     <body>
         <div class="row">
         
-                    <div class="col-lg-10">
-                        <table class="table ">
+                    <div class="col-lg-12">
+                       <table class = "table  table-bordered text-left  " style =" width:100%; background-color:#FFFFE0; ">
                             <thead>
                             <th>ID</th>
-                            <th>Procedimento</th>
+                            <th >Procedimento</th>
                             <th>Preço</th>
                             </thead>
-                            <?php foreach ($list as $line): ?>
+                            <?php 
+                        
+                            foreach ($list as $line): ?>
                                 <tr>
                                     <td><?= $line['id'] ?></td>
                                     <td><?= $line['name'] ?></td>
                                     <td><?= $line['price'] ?></td>
                                 </tr>
+
                             <?php endforeach ?>
                         </table>
+<div style="text-align: center ">
+<a href="../trabalhopratico2/Router.php?op=4.php"  class="btn btn-danger">Voltar</a>
+
+</div>
                     </div>
                     <div class="col-lg-2">
-                        <form action="/TrabalhoPratico2/Router.php?op=7" onsubmit="return validateUpdate()" method="post">
-                            <label for="idUpdate">Editar: </label>
-                            <div class="row">
-
-                                <input type="text" name="price" id="price" placeholder="Preço R$">
-                                <input type="text" name="name" id="name" placeholder="Nome">
-
-                            </div>
-                            <input type="submit" class="btn btn-success " name="Confirmar mudanças">
-             </form>        
+                       
                     </div>
                          </div>
     </body>

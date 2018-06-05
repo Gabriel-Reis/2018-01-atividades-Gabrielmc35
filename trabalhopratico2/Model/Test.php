@@ -13,6 +13,9 @@ class Test {
     private $procedure_id;
   
   public function __construct() {
+     if (!isset($_SESSION)) {
+            session_start();
+        }
     $this->db = Database::getInstance()->getDB();
   }
 
@@ -58,43 +61,24 @@ public function allTests()
         return $this->db->query($sql);
 }
 
-public function addTest()
-
-{
-	$sql= "INSERT INTO  tests(user_id,procedure_id,created_at,date)VALUES('" . $this->user_id . "','" . $this->procedure_id . "','" . $this->date . "', CURRENT_TIMESTAMP,CURRENT_TIMESTAMP ) ";
-	$query= $this->db->prepare($sql);
-	$result=$query->execute();
-	return $result;
-}
-
-public function updateTest()
-
-{
-	 
-        //$sql = "UPDATE tests SET "user_id ='" . $this->user_id . "' ,procedure_id= '" . $this->procedure_id . "' , date = '" . $this->date . "', CURRENT_TIMESTAMP  = '" . $this->id . "'";
 
 
-$sql = "UPDATE tests SET user_id ='" . $this->user_id . "' ,procedure_id= '" . $this->procedure_id . "' , date = '" . $this->date . "',  atualizado em= CURRENT_TIMESTAMP id do atualizador = '" . $this->id . "'";
 
-$query= $this->db->prepare($sql);
-	$result=$query->execute();
-	return $result;
-}
-
-
-  public function deleteTest() {
-        $sql = "DELETE FROM tests WHERE id='" . $this->user_id . "'";
-    $query= $this->db->prepare($sql);
-	$result=$query->execute();
-	return $result;
+  public function TestesUsuario() {
+        $userData = $_SESSION['userData'];
+        $userId = $userData['id'];
+        $query = $this->db->prepare("SELECT tests.id as id, procedures.name as name, tests.date as date, procedures.price as price FROM `tests`, `procedures` WHERE tests.user_id=" . $userId . " AND tests.procedure_id=procedures.id ORDER BY tests.date, procedures.name");
+        $query->execute();
+        $results = $query->fetchAll();
+        return $results;
     }
 
-      public function AllCount() {
-      //  $sql = $this->db->prepare("SELECT COUNT(procedures.id) as amount, SUM(procedures.price) as cost FROM `tests`, `procedures` WHERE tests.user_id=" . $userId . " AND tests.procedure_id=procedures.id");
-	$sql = "SELECT SUM(procedures.price) AS totalprice FROM  tests, users , procedures WHERE tests.user_id=  users.id AND  tests.procedure_id =  procedures.id ";
-
-        $query=$this->db->prepare($sql);
-        $results = $query->execute();
+    public function ContadorTestes() {
+        $userData = $_SESSION['userData'];
+        $userId = $userData['id'];
+        $query = $this->db->prepare("SELECT COUNT(tests.id) as amount, SUM(procedures.price) as cost FROM `tests`, `procedures` WHERE tests.user_id=" . $userId . " AND tests.procedure_id=procedures.id");
+        $query->execute();
+        $results = $query->fetch();
         return $results;
     }
 

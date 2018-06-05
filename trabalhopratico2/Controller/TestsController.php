@@ -2,17 +2,18 @@
 
 namespace Controller;
 
-use Model\Tests;
+use Model\Test;
 use Model\Procedures;
 
 class TestsController {
 
 function TestesUsuario() {
-        $tests = new Tests;
-        $results = $tests->showUserTests();
-        $totalCount = $tests->countUserTests();
+        $tests = new Test;
+        $results = $tests->TestesUsuario();
+        $totalCount = $tests->ContadorTestes();
         $proc = new Procedures(TRUE);
-        $list = $proc->listAll();
+        $list = $proc->AllProcedimentos();
+         include '../trabalhopratico2/View/testesUsuario.php';
         
     }
 
@@ -35,7 +36,15 @@ function TestesUsuario() {
 
 
     
-   
+   public function ContadorTestes() {
+        $userData = $_SESSION['userData'];
+        $userId = $userData['id'];
+        $query = $this->db->prepare("SELECT COUNT(tests.id) as amount, SUM(procedures.price) as cost FROM `test`, `procedures` WHERE test.user_id=" . $userId . " AND test.procedure_id=procedures.id");
+        $query->execute();
+        $results = $query->fetch();
+        return $results;
+    }
+
     
 
 

@@ -16,15 +16,15 @@
                     <h1 align="center">AREA DO ADMINISTRADOR</h1>
               
                 <div class="row">
-                    <a href="/TrabalhoPratico2/view/CreateProcedure.php" class="btn btn-info" >Inserir  procedimento</a>
 
-                    <a href="/TrabalhoPratico2/Router.php?op=7" class="btn btn-info" >Listar procedimentos</a>
+                    <a href="../trabalhopratico2/Router.php?op=6" class="btn btn-info" >Listar procedimentos</a>
 
-                    <a href="/TrabalhoPratico2/Router.php?op=14" class="btn btn-info" >Listar usuarios</a>
+                    <a href="../trabalhopratico2/Router.php?op=7" class="btn btn-info" >Listar usuarios</a>
 
-                    <a href="/TrabalhoPratico2/Router.php?op=15"  class="btn btn-info"> exames</a>
+                          <a href="../trabalhopratico2/Router.php?op=20" class="btn btn-info" >Modificar Procedimento</a>
+                            
 
-                               <a href="../trabalhopratico2/Index.php"  class="btn btn-info">Voltar</a>
+                               <a href="../trabalhopratico2/Router.php?op=4.php"  class="btn btn-danger">Voltar</a>
 
                 </div>
                 

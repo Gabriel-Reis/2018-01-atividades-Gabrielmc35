@@ -3,6 +3,7 @@
 namespace Model;
 
 use Model\Database;
+use PDO;
 
 //class Cidade {
   class User{
@@ -49,7 +50,7 @@ use Model\Database;
         return $this->db->query($sql);
     }
 
-     public function AddUser() {
+     /*public function AddUser() {
       
  $query = $this->db->prepare("INSERT INTO users(name, email, password, type, created_at) VALUES ('" . $name . "', '" . $email . "', '" . $password . "',  3,  CURRENT_TIMESTAMP)");
         $result = $query->execute();
@@ -58,8 +59,17 @@ use Model\Database;
         } else {
             return false;
         }
-    }
-
+    }*/
+  public function getAll(){
+            $db = null;
+            $db = Database::getInstance()->getDB();
+            $sql = "SELECT * FROM users ";
+            $result =   $db->query($sql);
+            $rows = $result->fetchAll(PDO::FETCH_ASSOC);
+            if( !empty($rows)){
+                return $rows;
+            }
+        }
 public function ValidarUser($email, $password)
 {
        $query = $this->db->prepare("SELECT * FROM `users` WHERE users.email='" . $email . "'AND users.password='" . $password . "'");
@@ -99,5 +109,7 @@ public function removeUser()
             return false;
         }
     }
+
+
 
 }

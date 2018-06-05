@@ -13,12 +13,15 @@
                 <div class="row jumbotron">
                     <h1 align="center">Área do Usuario</h1>
                 </div>
-                               <a href="/trabalhopratico2/Router.php?op=10"  class="btn btn-success">Verificar exames</a>
-                               <a href="../trabalhopratico2/Index.php"  class="btn btn-info">Voltar</a>
+                               <a = href ="/trabalhopratico2/Router.php?op=5"  class = "btn btn-success ">Verificar exames</a>
+
+                                                              <a = href ="/trabalhopratico2/Router.php?op=23"  class = "btn btn-success ">Agendar exames</a>
+
+                               <a href="../trabalhopratico2/Router.php?op=4.php"  class="btn btn-info">Voltar</a>
 
 
             </div>
-            <div class="col-lg-2"></div>
+          
         </div>
     </body>
 </html>

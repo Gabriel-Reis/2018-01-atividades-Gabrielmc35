@@ -13,27 +13,30 @@
                 <div class="form-group"  id="nome">
 
                     <label for="name">User:</label>
-                    <input type="text" name="name" class="form-control">
+                    <input type="text" name="name" class="form-control " required oninvalid="this.setCustomValidity('Digite o nome corretamente')"  oninput="this.setCustomValidity('')">
                   
                 </div>
 
 
                   <div class="form-group" id="password" >
                     <label for="password">Senha: </label>
-                    <input type="password" name="password" class="form-control">
+                    <input type="password" name="password" class="form-control" required oninvalid="this.setCustomValidity('Senha nao pode ficar em branco')"  oninput="this.setCustomValidity('')">
                    
                 </div>
 
                   <div class="form-group" id="email" >
+
+                    
                     <label for="email">E-mail: </label>
-                    <input type="text" name="email" class="form-control">
+                    <input type="text" name="email" class="form-control"required oninvalid="this.setCustomValidity('Digite o email de forma correta')"  oninput="this.setCustomValidity('')">
+                     <? //php echo  "cadastrado" ?>
                    
                 </div>
 
                
                 <div class="botoes">
                     <input type ="submit" id="Cadastro" class="botao btn btn-info btn-lg " value="   Confirmar Cadastro" align="text-center">
-             <a href="../Inicial.php">Voltar</a>
+             <a href="../trabalhopratico2/Router.php?op=4.php">Voltar</a>
                 </div>
                 
             </form>

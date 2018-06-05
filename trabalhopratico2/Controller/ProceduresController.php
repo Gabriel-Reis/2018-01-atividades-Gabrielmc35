@@ -7,9 +7,9 @@ use Model\Procedures;
 class ProceduresController {
     
     function AllProcedimentos($targetView) {
-        $proc = new Procedures(FALSE);
-        $list = $proc->AllProcedimentos();
-                include $targetView;
+        $procedure = new Procedures(FALSE);
+        $list = $procedure->AllProcedimentos();
+            include $targetView;
 
         
     }
@@ -17,7 +17,11 @@ class ProceduresController {
     function AddProcedimento($name, $price) {
         $proc = new Procedures(FALSE);
         $result = $proc->AddProcedimento($name, $price);
-       
+       if ($result) {
+            include "../trabalhopratico2/View/Administrador.php";
+        } else {
+            include "../trabalhopratico2/View/CriarProcedimento.php";
+        }
     }
 
     function removeProcedimento($id) {
@@ -26,14 +30,20 @@ class ProceduresController {
      }
      
 
-    function ModificaProcedimento( $name, $price) {
+   /* function ModificaProcedimento( $name, $price) {
         $proc = new Procedures(FALSE);
         $result = $proc->ModificaProcedimento( $name, $price);
-        
+     */   
    
-
+   public function updatePrice($dados){
+                $price = $dados['preco'];
+                $id = $dados['id'];
+                $procedure = new Procedures();
+                $procedure->update($price, $id);
+                
+            }
 }
 
 
 
-    }
+    

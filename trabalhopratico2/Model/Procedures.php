@@ -1,10 +1,11 @@
 <?php
 
 namespace Model;
+    include './model/Database.php';
 
 use Model\Database;
 
-class Aluno {
+class Procedures {
 
   protected $db = null;
     private $id;
@@ -13,7 +14,7 @@ class Aluno {
     private $user_id;
 
 
-  public function __construct($sessionStarted) {
+  public function __construct() {
         if(!isset($_SESSION)){
             session_start();
         }
@@ -21,7 +22,7 @@ class Aluno {
     }
 
   public function AllProcedimentos() {
-    $sql = "SELECT * FROM prpcedures ORDER BY name"; //teste 
+    $sql = "SELECT * FROM procedures ORDER BY name"; //teste 
     return $this->db->query($sql);
   }
 
@@ -51,13 +52,16 @@ class Aluno {
     }
 
 
-public function insertProcedimento()
+public function AddProcedimento()
 {
-        $sql = "INSERT INTO procedures (name, price, user_id, created_at) VALUES ('" .  $this->name  .  "','" . $this->price .  "','"  .  $this->user_id  .  "',  CURRENT_TIMESTAMP)";
-               $query = $this->db->prepare($sql);
+          $sql = "INSERT INTO procedures (name, price, user_id, created_at, updated_at) VALUES ('" . $this->name . "','" . $this->price . "','" . $this->user_id . "', CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)";
+        $stmt = $this->db->prepare($sql);
 
-         $result = $query->execute();
-        return $result;
+        If ($stmt->execute()) {
+           return true;
+        } else {
+              return false;
+        }
 }
 
 public function removeProcedimento()
@@ -73,5 +77,11 @@ public function removeProcedimento()
 
 
 
+      public function update($newPrice, $id){
+      $sql = "UPDATE procedures SET price = '". $newPrice ."' WHERE id = '". $id ."' ";
+      $this->db->query($sql);
+        include '../trabalhopratico2/View/UpdateProcedimento.php';
+     
+    }
 
 }
