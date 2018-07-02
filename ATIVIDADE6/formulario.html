@@ -1,0 +1,161 @@
+
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro de Usuário</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	<script src="./jquery-3.3.1.js"></script>
+
+	<script src="validacao.js"></script>
+</head>
+<body>
+<h1 class="text-center">Cadastro</h1>
+	
+	<div class="row">
+
+	<div class="col-md-3">
+	</div>
+
+	<div class="col-md-6">
+
+	<form action="" method="post" class="">  
+
+			<div class="form-inline" id="usu">
+
+			
+			<label for="usuario">Usuário: </label>
+			<input type="text" name="usuario" id="usuario" class="form-control">
+
+			<div class="alert alert-danger" style="display: none" id="alertaUsu">
+				<p>User nao pode ser em branco.</p>
+			</div>
+
+		</div><br>
+
+		<div class="form-inline" id="sen">
+			
+			<label for="senha">Senha: </label>
+			<input type="text" name="senha" id="senha" class="form-control">
+
+			<div class="alert alert-danger" style="display: none" id="alertaSen">
+				<p> senha não pode ficar em branco.</p>
+
+			</div>
+<br>
+				<br>
+		</div>
+
+		
+		<div class="form-group" id="nome">
+			
+			<label for="nome">Nome</label>
+			<input type="text" name="nome" class="form-control">
+
+			<div class="alert alert-danger" style="display: none" id="alertaNome">
+				<p>Nome nao pode ficar em branco.</p>
+			</div>
+		</div>
+
+		<div class="form-group" id="data">
+			
+			<label for="nome">Data de Nascimento</label>
+			<input type="text" name="data" class="form-control">
+
+			<div class="alert alert-danger" style="display: none" id="alertaData">
+				<p>Data nao pode ficar em branco.</p>
+			</div>
+		</div>
+
+
+		<div class="form-group" id="cepefi">
+			
+			<label for="nome">CPF</label>
+			<input type="text" name="cpf" class="form-control">
+
+			<div class="alert alert-danger" style="display: none" id="alertacpf">
+				<p>CPF nao pode ficar em branco ou ter alguma letra.</p>
+			</div>
+
+		</div>
+
+		<label for="gen">Gênero:</label>
+
+		<div class="radio">
+
+			<label><input type="radio" name="genero" value="F">Feminino</label>
+			
+		</div>
+
+		<div class="radio">
+			
+			<label><input type="radio" name="genero" value="M">Masculino</label>
+			
+		</div>
+		<br>
+
+		<div class="form-group">
+
+			<label for="cidade">Cidade:</label>
+
+			<select name="cidade" id="cidade" class="form-control">
+				<option value="0">Selecione</option>
+				<option value="1">João Monlevade</option>
+				<option value="2">Itabira</option>
+				<option value="3">Santa Bárbara</option>
+				<option value="4">Belo Horizonte</option>
+			</select>
+
+		</div>
+
+		<h1 class="text-center" id="area">Jogo preferido</h1>
+
+		<div class="checkbox" id="futebol">
+
+			<label>
+			<input type="checkbox" name="confirma">LOL
+			</label>
+
+		</div>
+
+		<div class="checkbox" id="basquete">
+
+			<label>
+			<input type="checkbox" name="confirma">CS: GO
+			</label>
+
+		</div>
+
+		<div class="checkbox" id="handball">
+
+			<label>
+			<input type="checkbox" name="confirma">DOta 2
+			</label>
+
+		</div>
+
+		<div class="checkbox" id="maratona">
+
+			<label>
+			<input type="checkbox" name="confirma">Fortnite
+			</label>
+
+		</div>
+
+	
+
+		<br><button type="button" name="cadastro" class="btn btn-danger">Confirmar</button>
+
+		<br><br><button type="reset" class="btn btn-info">Limpar todos os dados</button>
+
+	</form>
+
+	</div>
+
+	<div class="col-md-1">
+	</div>
+	</div>
+</body>
+</html>
